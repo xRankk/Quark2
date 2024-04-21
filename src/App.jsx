@@ -1,24 +1,25 @@
-import Navbar from "./Navbar.jsx";
-import Homepage from "./homepage.jsx";
-import { Route, Routes } from "react-router-dom";
-import AboutUs from "./AboutUs.jsx";
-import Gallery from "./Gallery.jsx";
-import Contact from "./Contact.jsx";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Navbar2 from './Navbar2';
+import Homepage from './homepage';
+import AboutUs from './AboutUs';
+import Gallery from './Gallery';
+import Contact from './Contact';
+import "./index.css";
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      <div className="container">
+    <div>
+      <Navbar2 />
+      <div className="container mx-auto flex flex-col items-center">
         <Routes>
-          <Route path="/homepage" element={<Homepage />} />
+          <Route path="/" element={<Homepage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/Gallery" element={<Gallery />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
       </div>
-    </>
+    </div>
   );
 }
 
